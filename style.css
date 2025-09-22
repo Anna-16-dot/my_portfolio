@@ -1,0 +1,295 @@
+:root {
+    --primary-color: #ffc107; /* Elegant gold for accents */
+    --text-color: #f5f5f5;    /* Soft white for primary text */
+    --background-color: #1c1c1c; /* Deep charcoal gray for the main background */
+    --card-background: #282828; /* Slightly lighter gray for cards and sections */
+    --light-gray: #444;    /* Mid-tone gray for borders and separators */
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: var(--card-background);
+    border-bottom: 1px solid var(--light-gray);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.name-logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--primary-color);
+}
+
+/* --- Main Content Sections --- */
+.content-section {
+    padding: 3rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Home Page Styling --- */
+.bio-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.bio-section .highlight {
+    color: var(--primary-color);
+}
+
+.bio-section .tagline {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.quick-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* --- General Button Style --- */
+.cta-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--card-background);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e6b000;
+}
+
+/* --- Resume Page Styling --- */
+.resume-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.resume-item {
+    background-color: var(--card-background);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: var(--card-shadow);
+}
+
+.resume-item h3 {
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.resume-item h4 {
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.date-range {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 1rem;
+}
+
+/* --- Portfolio Page Styling --- */
+.portfolio-section h2 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: 1.25rem;
+}
+
+.project-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+/* --- Project Details Page Styling --- */
+.back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-details-section h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-main-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.details-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tech-list li {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.project-links {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* --- Biodata Page Styling --- */
+.biodata-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.biodata-item p {
+    background-color: var(--card-background);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--primary-color);
+    box-shadow: var(--card-shadow);
+}
+
+.biodata-item p strong {
+    color: var(--primary-color);
+}
+
+
+/* --- Footer --- */
+.site-footer {
+    text-align: center;
+    padding: 2rem 5%;
+    border-top: 1px solid var(--light-gray);
+    color: #b0b0b0;
+    font-size: 0.9rem;
+}
+
+.site-footer .social-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        padding: 1rem 5%;
+    }
+
+    .main-nav ul {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .bio-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
